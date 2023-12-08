@@ -11,18 +11,6 @@ services:
       ACCEPT_EULA: "Y"
     networks:
       - public
-  talend:
-    image: talend/tac:latest
-    container_name: talend
-    ports:
-      - "8080:8080"
-    environment:
-      - TAC_ADMIN_USER=admin
-      - TAC_ADMIN_PASS=admin
-    depends_on:
-      - sql-server
-    networks:
-      - public
 
   mariadb:
     image: mariadb:latest
@@ -36,4 +24,4 @@ services:
 
 
 networks:
-  - public 
+  public:
