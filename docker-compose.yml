@@ -3,7 +3,7 @@ version: '3.2'
 services:
   sql-server:
     container_name: sql-server-db
-    image: microsoft/mssql-server-linux:2022-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
       - "1433:1433"
     environment:
@@ -11,7 +11,6 @@ services:
       ACCEPT_EULA: "Y"
     networks:
       - public
-
   mariadb:
     image: mariadb:latest
     container_name: mariadb
